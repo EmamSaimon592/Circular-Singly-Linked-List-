@@ -1,4 +1,3 @@
-// start the code
 #include <iostream>
 using namespace std;
 
@@ -87,4 +86,5 @@ int main() {
 
 // After deleting first node:
 // 20 -> 30 -> (head)
+
 
