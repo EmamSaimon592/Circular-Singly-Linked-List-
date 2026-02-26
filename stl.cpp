@@ -14,7 +14,7 @@ struct Student {
 
 int main() {
 
-    // 1️⃣ Using vector (Dynamic Array)
+    // Using vector (Dynamic Array)
     vector<Student> students = {
         {101, "Imam", 85.5},
         {102, "Rahim", 78.0},
@@ -22,7 +22,7 @@ int main() {
         {104, "Sakib", 88.7}
     };
 
-    // 2️⃣ Sort students by marks (Descending)
+    // Sort students by marks (Descending)
     sort(students.begin(), students.end(), [](Student a, Student b) {
         return a.marks > b.marks;
     });
@@ -34,7 +34,7 @@ int main() {
 
     cout << "\n";
 
-    // 3️⃣ Find a student using find_if
+    // Find a student using find_if
     int searchId = 102;
     auto it = find_if(students.begin(), students.end(),
         [searchId](Student s) {
@@ -49,7 +49,7 @@ int main() {
 
     cout << "\n";
 
-    // 4️⃣ Using map (Key-Value Pair)
+    //  Using map (Key-Value Pair)
     map<int, string> studentMap;
     for (auto s : students) {
         studentMap[s.id] = s.name;
@@ -62,7 +62,7 @@ int main() {
 
     cout << "\n";
 
-    // 5️⃣ Calculate average marks using accumulate
+    //  Calculate average marks using accumulate
     double total = accumulate(students.begin(), students.end(), 0.0,
         [](double sum, Student s) {
             return sum + s.marks;
